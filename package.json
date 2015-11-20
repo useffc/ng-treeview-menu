@@ -1,0 +1,23 @@
+{
+  "name": "ng-treeview-menu",
+  "version": "1.0.0",
+  "description": "a treeview menu component in angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "not yet"
+  },
+  "keywords": [
+    "angular",
+    "tree",
+    "dropdown",
+    "directive",
+    "factory",
+    "controller"
+  ],
+  "author": "useff chase",
+  "license": "ISC"
+}
