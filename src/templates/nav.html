@@ -1,0 +1,8 @@
+<li treeview-branch>
+  {{item.name}}
+  <ul treeview-submenu ng-if="item.children">
+    <li treeview-item ng-repeat="child in item.children">
+      {{child.name}}
+    </li>
+  </ul>
+</li>

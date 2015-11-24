@@ -5,8 +5,6 @@ module.exports = function (grunt) {
       dist: './dist',
       views: 'views',
       src: 'src',
-      img: 'src/img',
-      js: 'src/app',
       styles: 'src/stylesheets',
       fonts: 'src/fonts'
     },
@@ -57,7 +55,7 @@ module.exports = function (grunt) {
             expand: true,
             flatten: true,
             src: [
-              '<%= global.js %>/data/**/*'
+              '<%= global.src %>/data/**/*'
             ],
             dest: '<%= global.dist %>/data'
           },
@@ -65,7 +63,7 @@ module.exports = function (grunt) {
             expand: true,
             flatten: true,
             src: [
-              '<%= global.js %>/templates/*.html'
+              '<%= global.src %>/templates/*.html'
             ],
             dest: '<%= global.dist %>/templates'
           }
@@ -88,10 +86,10 @@ module.exports = function (grunt) {
       },
       main: {
         src: [
-          '<%= global.js %>/app.js',
-          '<%= global.js %>/services/appStateService.js',
-          '<%= global.js %>/controllers/navController.js',
-          '<%= global.js %>/directives/treeview.js'
+          '<%= global.src %>/app.js',
+          '<%= global.src %>/services/appStateService.js',
+          '<%= global.src %>/controllers/navController.js',
+          '<%= global.src %>/directives/treeview.js'
         ],
         dest: '<%= global.dist %>/js/app.js'
       }
@@ -102,11 +100,11 @@ module.exports = function (grunt) {
         tasks: ['compass']
       },
       js: {
-        files: '<%= global.js %>/**/*.js',
+        files: '<%= global.src %>/**/*.js',
         tasks: ['copy', 'concat']
       },
       markup: {
-        files: '<%= global.js %>/templates/*.html',
+        files: '<%= global.src %>/templates/*.html',
         tasks: ['copy']
       },
       grunt: {
