@@ -30,6 +30,8 @@
         element.bind('click', function() {
           navCtrl.expanded = true;
           navCtrl.openItem = scope.item;
+          console.log(navCtrl);
+          element.addClass('expanded');
         });
       }
     };
@@ -40,6 +42,7 @@
       link: function(scope, element, attributes, navCtrl) {
         element.bind('click', function() {
           console.log(scope.child.name + ' clicked');
+          console.log(navCtrl);
         });
       }
     };
