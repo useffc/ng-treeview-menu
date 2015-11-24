@@ -1,4 +1,4 @@
-<li treeview-branch>
+<li treeview-branch ng-repeat="item in navItems">
   {{item.name}}
   <ul treeview-submenu ng-if="item.children">
     <li treeview-item ng-repeat="child in item.children">
